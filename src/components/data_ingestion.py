@@ -59,7 +59,7 @@ class DataIngestion:
             
             d = d.reindex(columns = [ 'AREA', 'SALE_COND', 'PARK_FACIL',
        'BUILDTYPE', 'UTILITY_AVAIL', 'STREET', 'MZZONE', 'PROPERTY_AGE',
-       'INT_SQFT', 'DIST_MAINROAD', 'N_BEDROOM','N_BATHROOM', 'N_ROOM','SALES_PRICE'])
+       'INT_SQFT', 'N_BEDROOM','N_BATHROOM', 'N_ROOM','SALES_PRICE'])
 
             logging.info('Read the dataset as dataframe')
 

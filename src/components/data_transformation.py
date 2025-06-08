@@ -28,8 +28,8 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["PROPERTY_AGE","INT_SQFT","DIST_MAINROAD","N_BEDROOM","N_BATHROOM","N_ROOM"]
-            categorical_columns = ["AREA","SALE_COND","PARK_FACIL","BUILDTYPE","UTILITY_AVAIL","STREET","MZZONE"]
+            numerical_columns = ["PROPERTY_AGE","INT_SQFT","N_BEDROOM","N_BATHROOM","N_ROOM","PARK_FACIL"]
+            categorical_columns = ["AREA","SALE_COND","BUILDTYPE","UTILITY_AVAIL","STREET","MZZONE"]
 
             num_pipeline= Pipeline(
                 steps=[
@@ -80,7 +80,7 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformer_object()
 
             target_column_name="SALES_PRICE"
-            numerical_columns = ["PROPERTY_AGE","INT_SQFT","DIST_MAINROAD","N_BEDROOM","N_BATHROOM","N_ROOM"]
+            numerical_columns = ["PROPERTY_AGE","INT_SQFT","N_BEDROOM","N_BATHROOM","N_ROOM","PARK_FACIL"]
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
