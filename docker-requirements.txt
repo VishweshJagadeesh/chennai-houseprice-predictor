@@ -1,6 +1,0 @@
-pandas
-numpy
-scikit-learn==1.6.1
-dill
-Flask==2.3.2
-# -e .
