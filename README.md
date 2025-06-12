@@ -25,21 +25,35 @@
 - Created Prediction Pipeline using Flask Web App
 
 ## Deployment
-- Deployment using elastic beanstalk and a CD CodePipeline to [this repository](https://github.com/VishweshJagadeesh/student-deployment) using AWS
+- Deployment using ECR and EC2 instances(CI/CD) to [this repository](https://github.com/VishweshJagadeesh/chennai-deployment) using AWS
 
 ## Dataset
-- Dataset Source - https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
-- The data consists of 8 column and 1000 rows.
+- Dataset Source - [https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977](https://www.kaggle.com/datasets/kunwarakash/chennai-housing-sales-price)
+- the dataset contains 22 columns and 7109 rows
 
 ## Dataset information
-- gender : sex of students -> (Male/female)
-- race/ethnicity : ethnicity of students -> (Group A, B,C, D,E)
-- parental level of education : parents' final education ->(bachelor's degree, some college, master's degree, associate's degree, high school)
-- lunch : having lunch before test (standard or free/reduced)
-- test preparation course : complete or not complete before test
-- math score
-- reading score
-- writing score
+- PRT_ID:        Unique property identifier
+- AREA:          Location/area of the property
+- INT_SQFT:      Interior square footage of the property
+- DATE_SALE:     Date of sale
+- DIST_MAINROAD: Distance from main road
+- N_BEDROOM:     Number of bedrooms
+- N_BATHROOM:    Number of bathrooms
+- N_ROOM:        Number of rooms
+- SALE_COND:     Sale condition
+- PARK_FACIL:    Parking facility
+- DATE_BUILD:    Year of construction
+- BUILDTYPE:     Type of building
+- UTILITY_AVAIL: Utilities available
+- STREET:        Street type
+- MZZONE:        Market zone
+- QS_ROOMS:      Quality of rooms
+- QS_BATHROOM:   Quality of bathrooms
+- QS_BEDROOM:    Quality of bedrooms
+- QS_OVERALL:    Overall quality
+- REG_FEE:       Registration fee
+- COMMIS:        Commission
+- SALES_PRICE:   Sale price of the property
 
 ## Data Checks Performed
 - Missing values
@@ -52,22 +66,8 @@
 ## Exploratory Data Analysis (EDA)
 - More Description can be found in the notebook folder
 
-## Final Conclusions from EDA
-- Student's Performance is related with lunch, race, parental level education
-- Females lead in pass percentage and also are top-scorers
-- Student's Performance is not much related with test preparation course
-- Finishing preparation course is benefitial.
-
 ## Models used for Training
-- Linear Regression
-- Lasso
-- Ridge
-- K-Neighbours Regressor
-- Decision Tree
-- Random Forest Regressor
-- XGB Regressor
-- CatBoosting Regressor
-- AdaBoost Regressor
+The machine learning model used for house price prediction is trained on the dataset using regression algorithms such as Linear Regression, Random Forest Regression, and Gradient Boosting Regression. The model is evaluated based on various metrics such as Mean Absolute Error, Mean Squared Error, and R-squared value to ensure its accuracy and performance.
 
 
 ## Run Locally in your computer
@@ -90,10 +90,3 @@ After setting up environment and installing packages Run
   python application.py
 ```
 then head on to your local host with port 8080 ie. `localhost:8080`
-
-
-## Screenshots
-![image](https://github.com/user-attachments/assets/60768e4e-b1a9-4c3f-a405-cf8fd4950ba2)
-![image](https://github.com/user-attachments/assets/e4a77ced-18a2-4fc0-8b3e-82e29c17ced9)
-
-
